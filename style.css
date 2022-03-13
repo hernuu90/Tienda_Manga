@@ -1,0 +1,289 @@
+#goku2{
+    width: 15%;
+    height: 20%;
+}
+
+header{
+    background-color: #c21b1b;
+    padding: 20px 0;
+}
+
+.caja1{
+    width: 950px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#cancion{
+    font-family: 'Inconsolata', monospace;
+}
+
+nav{
+    position: absolute;
+    top : 60px;
+    right: 50px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{ /*esto se usa para capturar el movimiento del mouse sin usar Js*/
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+#nubegoku{
+   width: 50%;
+   height: 50%; 
+}
+
+.productos{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;    
+    width: 20%;
+    vertical-align: top;
+    margin: 0 2%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-top-color: black;
+    border-width: 10px;
+    border-style: solid;
+    border-left-color: white;
+    border-right-color: white;
+    border-block-end: none;
+}
+
+.productos li:hover{
+    border-top-color:#c78c19;
+}
+
+.productos li:active{ /* con esto capturo los clicks sin usar Js*/
+    border-top-color: darkred;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 35px;
+}
+
+.producto-descripcion{
+    font-size: 20px;
+}
+
+.precio{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes-productos/foto7.jpg);
+    padding: 40px;
+}
+
+.piepagina{
+    color: #000;
+    margin: 50px;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: wheat;
+    background: purple;
+    border: none;
+    border-radius: 5px;
+    transition: 1.2s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2) rotate(360deg);
+}
+
+table{
+    margin: 40px;
+
+}
+
+thead{
+    background: grey;
+    color: white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid #000;
+    padding: 10px 15px;
+}
+
+/*CSS para la pag principal ---------------------------------------------________*/
+
+.imagen_goku{
+    width: 100%;
+}
+
+.principal{
+    padding: 30px; 
+    background: red;
+    width: 95.5%;
+    margin: 5px 5px 5 px 5 px;}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear:left;
+    text-shadow: 1px 1px 10px darkblue; /*1er num eje horizontal, etc*/
+}
+
+h1+p{                  /*sirve para seleccionar elemntos especificos*/
+    background: #c78c19;
+}
+
+/*se le llama seudoelemento*/
+.titulo-principal::first-letter{              /*esto sirve para seleccionar la 1a letra*/
+    font-weight: bold;
+    
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.goku8{
+    width: 120px;
+    float: left;
+    margin: 20px;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(red,orangered);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.argumentos{
+    padding: 3em;
+    background: orangered;
+}
+
+.contenido-cosas{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-cosas{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5;
+}
+
+.items:before{
+    content:"§ ";
+}
+
+.items:first-child{/*con nth-child elijo la posicion que quiero hacerle algo*/
+    font-weight: bold;/*este item especial es para elegir sin la necesidad de crear un id*/
+}
+
+.goku2{
+    width: 40%;
+    transition: 600ms;
+    box-shadow: 8px 8px 20px 10px darkred;/*si pongo negativo va pal otro lado la sombra*/
+}/*si los voy separando por comas puedo agregar las sombras que quiera*/
+
+.goku2:hover{
+    opacity: 0.75;
+}
+
+.video{
+    width: 560px;
+    margin: 1em auto;
+}
+/*aca hago los querys que son las excepciones para la pag principal*/
+
+@media screen and (max-width: 480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    body{ /*esta media query es para decirle que tome como maximo el num q le pase*/
+        background-color: #000;/*si no pasara eso, pintaria el fondo de negro*/
+    } .caja1, .principal, .mapa-contenido, .contenido-cosas, .video{
+        width: auto;
+    }
+    .lista-cosas, .goku2{
+        width: 100%;
+    }
+}
